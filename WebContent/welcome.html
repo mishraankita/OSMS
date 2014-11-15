@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>login page</title>
+</head>
+<body  background="campus.jpg">
+<script type="text/JavaScript">
+	function validateForm()
+{
+ 
+   if( document.myForm.UserID.value == "" )
+   {
+     alert( "Please provide your User ID!" );
+     document.myForm.Name.focus() ;
+     return false;
+   }
+   if( document.myForm.password.value == "" )
+   {
+     alert( "Please provide password!" );
+     document.myForm.EMail.focus() ;
+     return false;
+   }
+   return true;
+}
+	</script>
+<form action="./LogonServlet" method="post" onsubmit="return validateForm();">
+	<h1 align="center"><font color="blue" size="6" >Login Page</font></h1>
+<table border="8" align="center">
+<!-- <select name="mydropdown"> -->
+<!-- <option value="Milk">Fresh Milk</option> -->
+<!-- <option value="Cheese">Old Cheese</option> -->
+<!-- <option value="Bread">Hot Bread</option> -->
+<!-- </select> -->
+	<tr>
+		<td >USER ID</td>
+		<td ><input type="text" name="UserID"> </td>
+	</tr>
+	<tr>
+		<td>PASSWORD</td>
+		<td><input type="password" name="passWord"></td>
+	</tr>
+	<tr>
+		<td>Account Type</td>
+		<td><input type="text" name="AccountType"></td>
+	</tr>
+	<tr>
+	<td><input type="submit" name="button_1"  value="SUBMIT"></td>
+	</tr>
+	<tr>
+	<td>
+	<a href="./forgetpassword.html">Forget Password</a>
+	</td>
+	</tr>
+</table>
+</form>
+
+</body>
+</html>

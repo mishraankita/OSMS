@@ -1,0 +1,47 @@
+<web-app>
+  <welcome-file-list>
+    <welcome-file>welcome.html</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <servlet-name>CommonServletForLogin</servlet-name>
+    <servlet-class>com.servlet.CommonServletForLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CommonServletForLogin</servlet-name>
+    <url-pattern>/LogonServlet</url-pattern>
+  </servlet-mapping>
+   
+  <servlet>
+    <servlet-name>ForgetpasswordServlet</servlet-name>
+    <servlet-class>com.servlet.ForgetpasswordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ForgetpasswordServlet</servlet-name>
+    <url-pattern>/ForgetServlet</url-pattern>
+  </servlet-mapping>
+   
+   <servlet>
+   <servlet-name>StudentSevlet</servlet-name>
+   	<servlet-class>com.servlet.StudentSevlet</servlet-class>
+   </servlet>
+  
+   	<servlet-mapping>
+  	<servlet-name>StudentSevlet</servlet-name>
+  	<url-pattern>/StudentServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+   	<servlet-name>GetStudentInfoServlet</servlet-name>
+   	<servlet-class>com.servlet.GetStudentInfoServlet</servlet-class>
+   </servlet>
+
+  
+  <servlet-mapping>
+  	<servlet-name>GetStudentInfoServlet</servlet-name>
+  	<url-pattern>/getStudentInfo</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+</web-app>
