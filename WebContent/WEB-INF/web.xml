@@ -23,7 +23,7 @@
    
    <servlet>
    <servlet-name>StudentSevlet</servlet-name>
-   	<servlet-class>StudentSevlet</servlet-class>
+   	<servlet-class>com.servlet.StudentSevlet</servlet-class>
    </servlet>
   
    	<servlet-mapping>
@@ -33,7 +33,7 @@
   
    <servlet>
    	<servlet-name>GetStudentInfoServlet</servlet-name>
-   	<servlet-class>GetStudentInfoServlet</servlet-class>
+   	<servlet-class>com.servlet.GetStudentInfoServlet</servlet-class>
    </servlet>
 
   

@@ -33,6 +33,8 @@ CREATE TABLE `studentdetails` (
   `Email` varchar(45) DEFAULT NULL,
   `SessionJoined` varchar(45) DEFAULT NULL,
   `DepartmentID` int(10) DEFAULT NULL,
+  `EnrollProgram` varchar(45) DEFAULT NULL,
+  `DateOfBirth` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`UserID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -43,7 +45,7 @@ CREATE TABLE `studentdetails` (
 
 LOCK TABLES `studentdetails` WRITE;
 /*!40000 ALTER TABLE `studentdetails` DISABLE KEYS */;
-INSERT INTO `studentdetails` VALUES (123,'Ankita','Mishra','st marc',51446695,'mishraankita88@live.com','Fall 2013',1);
+INSERT INTO `studentdetails` VALUES (123,'Ankita','Mishra','st marc',51446695,'mishraankita88@live.com','Fall 2013',1,NULL,NULL);
 /*!40000 ALTER TABLE `studentdetails` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-11-15  2:01:27
+-- Dump completed on 2014-11-15 14:55:33

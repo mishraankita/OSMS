@@ -35,7 +35,7 @@ CREATE TABLE `studentinfo` (
   `Curriculum` varchar(16) DEFAULT NULL,
   `Grade` varchar(16) DEFAULT NULL,
   PRIMARY KEY (`studentid`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `studentinfo` (
 
 LOCK TABLES `studentinfo` WRITE;
 /*!40000 ALTER TABLE `studentinfo` DISABLE KEYS */;
-INSERT INTO `studentinfo` VALUES (1,'sanga','reddy','ch','sai reddy','17-08-1985','hyd','CBSC','10'),(2,'mahesh','kumar','nagula','ramaiah','19-07-1986','karimnagar','CBSC','9'),(6,'praveen','kumar','koilakondla','baburao','08-10-1986','oldcity','ICSC','10'),(7,'jaipal','reddy','nimma','sanjeevreddy','08-03-1986','siddipet','CBSC','10'),(8,'fname','','lname','fathername','17-08-1985','address','ICSC','8');
+INSERT INTO `studentinfo` VALUES (1,'sanga','reddy','ch','sai reddy','17-08-1985','hyd','CBSC','10'),(2,'mahesh','kumar','nagula','ramaiah','19-07-1986','karimnagar','CBSC','9'),(6,'praveen','kumar','koilakondla','baburao','08-10-1986','oldcity','ICSC','10'),(7,'jaipal','reddy','nimma','sanjeevreddy','08-03-1986','siddipet','CBSC','10'),(8,'fname','','lname','fathername','17-08-1985','address','ICSC','8'),(9,'a','a','a','a','12/08/1988','a','CBSC','1');
 /*!40000 ALTER TABLE `studentinfo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-11-15  2:01:21
+-- Dump completed on 2014-11-15 14:55:27
