@@ -28,6 +28,8 @@ CREATE TABLE `coursetaken` (
   `UserID` int(11) NOT NULL,
   `CourseID` int(10) NOT NULL,
   `GradesObtained` varchar(45) DEFAULT NULL,
+  `sessionRegisterIn` varchar(45) DEFAULT NULL,
+  `schedule` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`UserID`,`CourseID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -38,7 +40,7 @@ CREATE TABLE `coursetaken` (
 
 LOCK TABLES `coursetaken` WRITE;
 /*!40000 ALTER TABLE `coursetaken` DISABLE KEYS */;
-INSERT INTO `coursetaken` VALUES (123,999,'A++');
+INSERT INTO `coursetaken` VALUES (123,987,'A',NULL,NULL),(123,998,'A',NULL,NULL),(123,999,'A++',NULL,NULL),(555,3,'A',NULL,NULL);
 /*!40000 ALTER TABLE `coursetaken` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-11-15 14:55:23
+-- Dump completed on 2014-11-18 23:35:21

@@ -40,7 +40,7 @@ CREATE TABLE `employee` (
 
 LOCK TABLES `employee` WRITE;
 /*!40000 ALTER TABLE `employee` DISABLE KEYS */;
-INSERT INTO `employee` VALUES (111,'sam','smith','montreal','sam@gmail.com'),(222,'anna','wilson','montreal','ana@gmail.com');
+INSERT INTO `employee` VALUES (111,'sam','smith','montreal','sam@gmail.com'),(222,'anna','wilson','montreal','ana@gmail.com'),(666,'hh','hh','hh','hh');
 /*!40000 ALTER TABLE `employee` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-11-15 14:55:29
+-- Dump completed on 2014-11-18 23:35:27

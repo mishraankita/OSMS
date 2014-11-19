@@ -42,6 +42,46 @@
   	<url-pattern>/getStudentInfo</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+   	<servlet-name>SearchStudentOrDpdDetails</servlet-name>
+   	<servlet-class>com.servlet.SearchStudentOrDpdDetails</servlet-class>
+   </servlet>
+
   
+  <servlet-mapping>
+  	<servlet-name>SearchStudentOrDpdDetails</servlet-name>
+  	<url-pattern>/searchDetails</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+   	<servlet-name>SearchStudentDetails</servlet-name>
+   	<servlet-class>com.servlet.SearchStudentDetails</servlet-class>
+   </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>SearchStudentDetails</servlet-name>
+  	<url-pattern>/SearchStudentDetails</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+   	<servlet-name>EnrollStudentOrDpd</servlet-name>
+   	<servlet-class>com.servlet.EnrollStudentOrDpd</servlet-class>
+   </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>EnrollStudentOrDpd</servlet-name>
+  	<url-pattern>/enroll</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+   	<servlet-name>ManageStudentDetails</servlet-name>
+   	<servlet-class>com.servlet.ManageStudentDetails</servlet-class>
+   </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ManageStudentDetails</servlet-name>
+  	<url-pattern>/ManageStudentDetails</url-pattern>
+  </servlet-mapping>
   
 </web-app>
