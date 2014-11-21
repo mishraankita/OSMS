@@ -5,11 +5,7 @@ public class Student {
 	public int getUserID() {
 		return userID;
 	}
-
-	//no test commit in develop
-
-	//test commit
-
+	
 	public void setUserID(int userID) {
 		this.userID = userID;
 	}
