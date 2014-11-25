@@ -35,11 +35,23 @@
    	<servlet-name>GetStudentInfoServlet</servlet-name>
    	<servlet-class>com.servlet.GetStudentInfoServlet</servlet-class>
    </servlet>
+   <servlet>
+   	<description>
+   	</description>
+   	<display-name>CourseRegistrationServlet</display-name>
+   	<servlet-name>CourseRegistrationServlet</servlet-name>
+   	<servlet-class>com.servlet.CourseRegistrationServlet</servlet-class>
+   </servlet>
 
   
   <servlet-mapping>
   	<servlet-name>GetStudentInfoServlet</servlet-name>
   	<url-pattern>/getStudentInfo</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>CourseRegistrationServlet</servlet-name>
+  	<url-pattern>/CourseRegistrationServlet</url-pattern>
   </servlet-mapping>
   
   
