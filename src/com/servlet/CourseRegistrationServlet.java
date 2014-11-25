@@ -31,16 +31,11 @@ public class CourseRegistrationServlet extends HttpServlet {
         super();
     }
 
-	String testString = "ADD";
-
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-//		request.setAttribute("StudentName", "Mary");
-//		RequestDispatcher rd = request.getRequestDispatcher("./courseRegistration.jsp");
-//		rd.forward(request, response);
+		//To do
 	}
 
 	/**
@@ -72,7 +67,7 @@ public class CourseRegistrationServlet extends HttpServlet {
 			String rowItem = iter.next();
 			String delimiter = "[$]";
 			String[] tokens = rowItem.split(delimiter);
-			if(tokens.length < 4)//error, expecting 4 items
+			if(tokens.length < 4)//error, expecting 4 items: buttonLabel, courseName, courseSchedule, courseID
 				continue;
 			String activeState = "disabled";
 			if(tokens[0].equals("Add") || tokens[0].equals("Drop"))
