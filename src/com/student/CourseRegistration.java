@@ -296,7 +296,7 @@ public class CourseRegistration {
 				// if no pre-req, add line item 'No PreReq'
 				if (preReqStatus == Status.NOT_TAKEN
 						|| preReqStatus == Status.REGISTERED) {
-					courseRegistrationList.add(buildLineItem("No PreReq.", courseOffered));
+					courseRegistrationList.add(buildLineItem("No_PreReq.", courseOffered));
 					continue;
 				}
 				// if (preReqStatus == Status.PASSED) then do nothing, go
