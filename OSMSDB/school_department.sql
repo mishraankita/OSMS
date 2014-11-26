@@ -38,7 +38,7 @@ CREATE TABLE `department` (
 
 LOCK TABLES `department` WRITE;
 /*!40000 ALTER TABLE `department` DISABLE KEYS */;
-INSERT INTO `department` VALUES (1,'SOEN','1');
+INSERT INTO `department` VALUES (1,'SOEN','1'),(2,'PHYS','2'),(3,'CHEM','3'),(4,'MATH','4'),(5,'ENG','5'),(6,'COMP','6'),(7,'BIO','7');
 /*!40000 ALTER TABLE `department` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
