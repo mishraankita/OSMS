@@ -35,13 +35,18 @@
    	<servlet-name>GetStudentInfoServlet</servlet-name>
    	<servlet-class>com.servlet.GetStudentInfoServlet</servlet-class>
    </servlet>
+
    <servlet>
-   	<description>
-   	</description>
    	<display-name>CourseRegistrationServlet</display-name>
    	<servlet-name>CourseRegistrationServlet</servlet-name>
    	<servlet-class>com.servlet.CourseRegistrationServlet</servlet-class>
    </servlet>
+
+  <servlet-mapping>
+  	<servlet-name>CourseRegistrationServlet</servlet-name>
+  	<url-pattern>/CourseRegistrationServlet</url-pattern>
+  </servlet-mapping>
+  
 
   
   <servlet-mapping>
@@ -49,11 +54,55 @@
   	<url-pattern>/getStudentInfo</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+   	<servlet-name>SearchStudentOrDpdDetails</servlet-name>
+   	<servlet-class>com.servlet.SearchStudentOrDpdDetails</servlet-class>
+   </servlet>
+   
+
   <servlet-mapping>
-  	<servlet-name>CourseRegistrationServlet</servlet-name>
-  	<url-pattern>/CourseRegistrationServlet</url-pattern>
+  	<servlet-name>SearchStudentOrDpdDetails</servlet-name>
+  	<url-pattern>/searchDetails</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+   	<servlet-name>SearchStudentDetails</servlet-name>
+   	<servlet-class>com.servlet.SearchStudentDetails</servlet-class>
+   </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>SearchStudentDetails</servlet-name>
+  	<url-pattern>/SearchStudentDetails</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+   	<servlet-name>EnrollStudentOrDpd</servlet-name>
+   	<servlet-class>com.servlet.EnrollStudentOrDpd</servlet-class>
+   </servlet>
   
+  <servlet-mapping>
+  	<servlet-name>EnrollStudentOrDpd</servlet-name>
+  	<url-pattern>/enroll</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+   	<servlet-name>ManageStudentDetails</servlet-name>
+   	<servlet-class>com.servlet.ManageStudentDetails</servlet-class>
+   </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ManageStudentDetails</servlet-name>
+  	<url-pattern>/ManageStudentDetails</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+   	<servlet-name>SetDatesServlet</servlet-name>
+   	<servlet-class>com.servlet.SetDatesServlet</servlet-class>
+   </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>SetDatesServlet</servlet-name>
+  	<url-pattern>/SetDates</url-pattern>
+  </servlet-mapping>
   
 </web-app>

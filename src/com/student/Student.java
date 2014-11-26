@@ -1,36 +1,64 @@
 package com.student;
 public class Student {
-	private int studentid;
-	private String  firstname, middlename, lastname, fname, dob, address, Curriculum, Grade;
-	public int getStudentid() {
-		return studentid;
+	private int userID , phoneNumber , departmentID;
+	private String  firstname, lastname, address, email, sessionJoined, enrollProgram, dob;
+	public int getUserID() {
+		return userID;
 	}
-	public void setStudentid(int studentid) {
-		this.studentid = studentid;
+
+	//test commit new
+
+	public void setUserID(int userID) {
+		this.userID = userID;
 	}
-	public String getFirstname() {
+	public int getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(int phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	public int getDepartmentID() {
+		return departmentID;
+	}
+	public void setDepartmentID(int departmentID) {
+		this.departmentID = departmentID;
+	}
+	public String getFirstName() {
 		return firstname;
 	}
-	public void setFirstname(String firstname) {
+	public void setFirstName(String firstname) {
 		this.firstname = firstname;
 	}
-	public String getMiddlename() {
-		return middlename;
-	}
-	public void setMiddlename(String middlename) {
-		this.middlename = middlename;
-	}
-	public String getLastname() {
+	public String getLastName() {
 		return lastname;
 	}
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
-	public String getFname() {
-		return fname;
+	
+	public String getAddress() {
+		return address;
 	}
-	public void setFname(String fname) {
-		this.fname = fname;
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getSessionJoined() {
+		return sessionJoined;
+	}
+	public void setSessionJoined(String sessionJoined) {
+		this.sessionJoined = sessionJoined;
+	}
+	public String getEnrollProgram() {
+		return enrollProgram;
+	}
+	public void setEnrollProgram(String enrollProgram) {
+		this.enrollProgram = enrollProgram;
 	}
 	public String getDob() {
 		return dob;
@@ -38,24 +66,5 @@ public class Student {
 	public void setDob(String dob) {
 		this.dob = dob;
 	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	public String getCurriculum() {
-		return Curriculum;
-	}
-	public void setCurriculum(String curriculum) {
-		Curriculum = curriculum;
-	}
-	public String getGrade() {
-		return Grade;
-	}
-	public void setGrade(String grade) {
-		Grade = grade;
-	} 
 	
-
 }

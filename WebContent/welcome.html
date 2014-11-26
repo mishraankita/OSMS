@@ -7,23 +7,28 @@
 <script type="text/JavaScript">
 	function validateForm()
 {
- 
-   if( document.myForm.UserID.value == "" )
+ var x = document.forms["login"]["UserID"].value;
+   if( x == null || x == "" )
    {
      alert( "Please provide your User ID!" );
-     document.myForm.Name.focus() ;
      return false;
    }
-   if( document.myForm.password.value == "" )
+   var y = document.forms["login"]["passWord"].value;
+   if( y == null || y == "" )
    {
      alert( "Please provide password!" );
-     document.myForm.EMail.focus() ;
+     return false;
+   }
+   var z = document.forms["login"]["AccountType"].value;
+   if( z == null || z == "" )
+   {
+     alert( "Please provide Account Type" );
      return false;
    }
    return true;
 }
 	</script>
-<form action="./LogonServlet" method="post" onsubmit="return validateForm();">
+<form name ="login" action="./LogonServlet" method="post" onsubmit="return validateForm()">
 	<h1 align="center"><font color="blue" size="6" >Login Page</font></h1>
 <table border="8" align="center">
 <!-- <select name="mydropdown"> -->
@@ -39,9 +44,17 @@
 		<td>PASSWORD</td>
 		<td><input type="password" name="passWord"></td>
 	</tr>
+<!-- 	<tr> -->
+<!-- 		<td>Account Type</td> -->
+<!-- 		<td><input type="text" name="AccountType"></td> -->
+<!-- 	</tr> -->
 	<tr>
-		<td>Account Type</td>
-		<td><input type="text" name="AccountType"></td>
+		<td>Account Type </td>
+		<td><select name="AccountType">
+		  <option value="admin" selected="selected">Admin</option>
+		  <option value="student">Student</option>
+		  <option value="dpd">DPD</option>
+		</select></td>
 	</tr>
 	<tr>
 	<td><input type="submit" name="button_1"  value="SUBMIT"></td>

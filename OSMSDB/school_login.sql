@@ -41,7 +41,7 @@ CREATE TABLE `login` (
 
 LOCK TABLES `login` WRITE;
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES (111,'abc','Whats your favorite subject?','maths','admin','active'),(123,'abc','Whats your favorite subject?','maths','student','active'),(222,'abc','Whats your favorite subject?','maths','dpd','active');
+INSERT INTO `login` VALUES (66,'abc','kk','maths','student','active'),(111,'abc','Whats your favorite subject?','maths','admin','active'),(123,'abc','Whats your favorite subject?','maths','student','active'),(222,'abc','Whats your favorite subject?','maths','dpd','active'),(666,'abc','hh','maths','dpd','active'),(777,'5555','z','maths','student','active'),(888,'abc','aa','maths','student','active'),(6776973,'abc','whats your fav subject?','maths','student','active');
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-11-15 14:55:31
+-- Dump completed on 2014-11-18 23:35:29
