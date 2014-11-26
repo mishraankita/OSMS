@@ -27,7 +27,7 @@ public class ManageStudentDetails extends HttpServlet {
 		//String userID = (String) request.getSession().getAttribute("userID");
 		String userID = (String) session.getAttribute("userID");	
 		System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! " + userID);
-		//String firstName = request.getParameter("")
+		//String firstName = request.getParameter("firstName");
 		PrintWriter out = response.getWriter();
 
 		try {
@@ -46,48 +46,107 @@ public class ManageStudentDetails extends HttpServlet {
 				    updateData.setInt(2, Integer.parseInt(userID));
 				 
 				 updateData.executeUpdate();
-				 //con.commit();
 			 }
-//			 if("Edit Last name".equals(action)){
-//				 String lastname = request.getParameter("LastName");
-//				 ResultSet rs = stmt
-//							.executeQuery("update studentdetails set LastName = '" + lastname + "where UserID='"+ userID + "'");
-//			 }
-//			 if("Edit Address".equals(action)){
-//				 String address = request.getParameter("address");
-//				 ResultSet rs = stmt
-//							.executeQuery("update studentdetails set Address = '" + address + "where UserID='"+ userID + "'");	
-//			 }
-//			 if("Edit PhoneNumber".equals(action)){
-//				 String phoneNumber = request.getParameter("phoneNumber");
-//				 ResultSet rs = stmt
-//							.executeQuery("update studentdetails set PhoneNumber = '" + phoneNumber + "where UserID='"+ userID + "'");	
-//			 }
-//			 if("Edit Email".equals(action)){
-//				 String email = request.getParameter("Email");
-//				 ResultSet rs = stmt
-//							.executeQuery("update studentdetails set Email = '" + email + "where UserID='"+ userID + "'");
-//			 }
-//			 if("Edit SessionJoined".equals(action)){
-//				 String sessionJoined = request.getParameter("SessionJoined");
-//				 ResultSet rs = stmt
-//							.executeQuery("update studentdetails set SessionJoined = '" + sessionJoined + "where UserID='"+ userID + "'");
-//			 }
-//			 if("Edit DepartmentID".equals(action)){
-//				 String departmentID = request.getParameter("DepartmentID");
-//				 ResultSet rs = stmt
-//							.executeQuery("update studentdetails set DepartmentID = '" + departmentID + "where UserID='"+ userID + "'");
-//			 }
-//			 if("Edit EnrollProgram".equals(action)){
-//				 String enrollProgram = request.getParameter("EnrollProgram");
-//				 ResultSet rs = stmt
-//							.executeQuery("update studentdetails set EnrollProgram = '" + enrollProgram + "where UserID='"+ userID + "'");
-//			 }
-//			 if("Edit DateOfBirth".equals(action)){
-//				 String dateOfBirth = request.getParameter("DateOfBirth");
-//				 ResultSet rs = stmt
-//							.executeQuery("update studentdetails set DateOfBirth = '" + dateOfBirth + "where UserID='"+ userID + "'");
-//			 }
+			 if("Edit Last name".equals(action)){
+				 String lastname = request.getParameter("LastName");
+				    String updateString =
+				            "update studentdetails " +
+				            "set LastName = ? where UserID = ?";
+				    updateData = con.prepareStatement(updateString);
+				    updateData.setString(1, lastname);
+				    updateData.setInt(2, Integer.parseInt(userID));
+				 
+				 updateData.executeUpdate();
+			 }
+			 if("Edit Address".equals(action)){
+				 String address = request.getParameter("address");
+				    String updateString =
+				            "update studentdetails " +
+				            "set Address = ? where UserID = ?";
+				    updateData = con.prepareStatement(updateString);
+				    updateData.setString(1, address);
+				    updateData.setInt(2, Integer.parseInt(userID));
+				 
+				 updateData.executeUpdate();
+			 }
+			 if("Edit PhoneNumber".equals(action)){
+				 String phoneNumber = request.getParameter("phoneNumber");
+				    String updateString =
+				            "update studentdetails " +
+				            "set PhoneNumber = ? where UserID = ?";
+				    updateData = con.prepareStatement(updateString);
+				    updateData.setString(1, String.valueOf(phoneNumber));
+				    updateData.setInt(2, Integer.parseInt(userID));
+				 
+				 updateData.executeUpdate();
+			 }
+			 if("Edit Email".equals(action)){
+				 String email = request.getParameter("Email");
+				    String updateString =
+				            "update studentdetails " +
+				            "set Email = ? where UserID = ?";
+				    updateData = con.prepareStatement(updateString);
+				    updateData.setString(1, email);
+				    updateData.setInt(2, Integer.parseInt(userID));
+				 
+				 updateData.executeUpdate();
+			 }
+			 if("Edit SessionJoined".equals(action)){
+				 String sessionJoined = request.getParameter("SessionJoined");
+				    String updateString =
+				            "update studentdetails " +
+				            "set SessionJoined = ? where UserID = ?";
+				    updateData = con.prepareStatement(updateString);
+				    updateData.setString(1, sessionJoined);
+				    updateData.setInt(2, Integer.parseInt(userID));
+				 
+				 updateData.executeUpdate();
+			 }
+			 if("Edit DepartmentID".equals(action)){
+				 String departmentID = request.getParameter("DepartmentID");
+				    String updateString =
+				            "update studentdetails " +
+				            "set DepartmentID = ? where UserID = ?";
+				    updateData = con.prepareStatement(updateString);
+				    updateData.setString(1, String.valueOf(departmentID));
+				    updateData.setInt(2, Integer.parseInt(userID));
+				 
+				 updateData.executeUpdate();
+			 }
+			 if("Edit EnrollProgram".equals(action)){
+				 String enrollProgram = request.getParameter("EnrollProgram");
+				    String updateString =
+				            "update studentdetails " +
+				            "set EnrollProgram = ? where UserID = ?";
+				    updateData = con.prepareStatement(updateString);
+				    updateData.setString(1, enrollProgram);
+				    updateData.setInt(2, Integer.parseInt(userID));
+				 
+				 updateData.executeUpdate();
+			 }
+			 if("Edit DateOfBirth".equals(action)){
+				 String dateOfBirth = request.getParameter("DateOfBirth");
+				    String updateString =
+				            "update studentdetails " +
+				            "set DateOfBirth = ? where UserID = ?";
+				    updateData = con.prepareStatement(updateString);
+				    updateData.setString(1, dateOfBirth);
+				    updateData.setInt(2, Integer.parseInt(userID));
+				 
+				 updateData.executeUpdate();
+			 }
+			 if("Edit Status".equals(action)){
+				 String status = request.getParameter("Edit Status");
+				    String updateString =
+				            "update login " +
+				            "set Status = ? where UserID = ?";
+				    updateData = con.prepareStatement(updateString);
+				    updateData.setString(1, status);
+				    updateData.setInt(2, Integer.parseInt(userID));
+				 
+				 updateData.executeUpdate();
+			 }
+			 
 				out.println(" <h2 align=center><a href=./student.jsp>Register a new Student</a><br/></h2>");
 				out.println(" <h2 align=center><a href=./adminsuccess.html> Go to Home</a></h2>");
 		} catch (Exception e) {

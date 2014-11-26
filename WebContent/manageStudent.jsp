@@ -26,16 +26,14 @@ userID = request.getParameter("UserID");
  if("manageStudent".equals(action)){
 	 request.getSession().getAttribute("userID");
 	 session.setAttribute("userID",userID);
-	 System.out.println("UserID inside the action = managestudent option is : " + userID);
+	 System.out.println("!!!!!!!!!!!!!!!!!!!!!!! UserID inside the action = managestudent option is : " + userID);
   ResultSet rs = stmt.executeQuery("select * from studentdetails where userID='"
  					+ userID + "'");	
 	  while(rs.next()){
-	  System.out.println("rs inside the action = managestudent option is : " + rs);
-	   System.out.println("userid inside the action = managestudent option is : " + rs.getInt(1));
-	   System.out.println("first name inside the action = managestudent option is : " + rs.getString(2));
 	 	out.println("<html><table align=center><tr><td> The user ID is : " + rs.getInt(1) + "</td></tr></html>");
  	 }
   }
+ 
 	if("manageStudent".equals(action)){
 	ResultSet rs = stmt.executeQuery("select * from studentdetails where userID='"
 				+ userID + "'");	
@@ -238,6 +236,7 @@ userID = request.getParameter("UserID");
 	</td>
 	</tr>	
 	</table>
+	
 </form>
  <h3 align="center"><a href="./adminsuccess.html">   Go to Home</a></h3>
 </body>

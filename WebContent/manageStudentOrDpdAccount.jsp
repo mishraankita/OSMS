@@ -14,10 +14,10 @@
 	</tr>
 	<tr>
 	<td>
-	<input type="submit" name= "action" value="manageStudent" />
+	<input type="submit" name= "action" value="manageStudent" onclick="form.action='manageStudent.jsp';">
 	</td>
 	<td>
-	<input type="submit" name= "action" value="manageDPD" />
+	<input type="submit" name= "action" value="manageDPD" onclick="form.action='manageDpd.jsp';">
 	</td>
 	</tr>
 </table>

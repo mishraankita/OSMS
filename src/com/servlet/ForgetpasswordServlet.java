@@ -35,19 +35,24 @@ public class ForgetpasswordServlet extends HttpServlet {
 				// String dbuserID = rs.getString("UserID");
 				// to chk if the userID exists.
 				String dbAnswer = rs.getString("Answer");
+				int status = rs.getInt("Status");
 				// System.out.println("db answer is : " + dbAnswer);
 				if (userID == null || answer == null || userID == "") {
 					RequestDispatcher rd = request
 							.getRequestDispatcher("./failure.html");
 					rd.forward(request, response);
 				}
-				if (answer.equalsIgnoreCase(dbAnswer)) {
+				if (answer.equalsIgnoreCase(dbAnswer) && status==1) {
 					// TODO save the password to the INBOX AND OPEN THE
 					// ACCOUNT
 					RequestDispatcher rd = request
 							.getRequestDispatcher("./studentsuccess.html");
 					rd.forward(request, response);
-				} else {
+				} else if(status==0){
+					RequestDispatcher rd = request
+							.getRequestDispatcher("./accountLocked.html");
+					rd.forward(request, response);
+				}else{
 					RequestDispatcher rd = request
 							.getRequestDispatcher("./failure.html");
 					rd.forward(request, response);

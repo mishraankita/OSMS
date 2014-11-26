@@ -73,7 +73,6 @@
   	<url-pattern>/enroll</url-pattern>
   </servlet-mapping>
   
-  
     <servlet>
    	<servlet-name>ManageStudentDetails</servlet-name>
    	<servlet-class>com.servlet.ManageStudentDetails</servlet-class>
@@ -82,6 +81,16 @@
   <servlet-mapping>
   	<servlet-name>ManageStudentDetails</servlet-name>
   	<url-pattern>/ManageStudentDetails</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+   	<servlet-name>SetDatesServlet</servlet-name>
+   	<servlet-class>com.servlet.SetDatesServlet</servlet-class>
+   </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>SetDatesServlet</servlet-name>
+  	<url-pattern>/SetDates</url-pattern>
   </servlet-mapping>
   
 </web-app>

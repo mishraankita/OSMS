@@ -24,17 +24,16 @@ public class SearchStudentDetails extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 
 		HttpSession session = request.getSession();
-		String userID = request.getParameter("userID");
+		String userID = request.getParameter("UserID");
 		List l = new ArrayList();
 		PrintWriter out = response.getWriter();
-
+		System.out.println("userID is :" + userID);
 		try {
 			Connection con = DBConnection.getConnection();
 			Statement stmt = con.createStatement();
 				ResultSet rs = stmt
 						.executeQuery("select * from studentdetails where UserID='"
 								+ userID + "'");
-				System.out.println("rs is :" + rs);
 
 				System.out
 						.println("===============students====  UserID ,firstname, lastname, Address, dob, address, Curriculum, Grade;===========");

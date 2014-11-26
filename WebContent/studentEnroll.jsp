@@ -7,7 +7,106 @@
 <title>student registration</title>
 </head>
 <body background="welcome.jpg">
-<form action="./enroll" method=POST>
+<script type="text/JavaScript">
+
+	function validateForm()
+{
+ var a = document.forms["studentEnroll"]["userID"].value;
+   if( a == null || a == "" )
+   {
+     alert( "Please provide your User ID!" );
+     return false;
+   }
+   var b = document.forms["studentEnroll"]["firstname"].value;
+   if( b == null || b == "" )
+   {
+     alert( "Please provide firstname!" );
+     return false;
+   }
+   var c = document.forms["studentEnroll"]["lastname"].value;
+   if( c == null || c == "" )
+   {
+     alert( "Please provide lastname " );
+     return false;
+   }
+    var d = document.forms["studentEnroll"]["address"].value;
+   if( d == null || d == "" )
+   {
+     alert( "Please provide address!" );
+     return false;
+   }
+   var e = document.forms["studentEnroll"]["phoneNumber"].value;
+   if( e == null || e == "" )
+   {
+     alert( "Please provide phoneNumber " );
+     return false;
+   }
+     var f = document.forms["studentEnroll"]["email"].value;
+   if( f == null || f == "" )
+   {
+     alert( "Please provide email " );
+     return false;
+   }
+    var g = document.forms["studentEnroll"]["sessionJoined"].value;
+   if( g == null || g == "" )
+   {
+     alert( "Please provide sessionJoined !" );
+     return false;
+   }
+   var h = document.forms["studentEnroll"]["departmentID"].value;
+   if( h == null || h == "" )
+   {
+     alert( "Please provide departmentID " );
+     return false;
+   }
+    var i = document.forms["studentEnroll"]["enrollProgram"].value;
+   if( i == null || i == "" )
+   {
+     alert( "Please provide enrollProgram!" );
+     return false;
+   }
+   var j = document.forms["studentEnroll"]["dob"].value;
+   if( j == null || j == "" )
+   {
+     alert( "Please provide Date of Birth " );
+     return false;
+   }
+    var j = document.forms["studentEnroll"]["password"].value;
+   if( j == null || j == "" )
+   {
+     alert( "Please provide password " );
+     return false;
+   }
+    var j = document.forms["studentEnroll"]["securityQuestion"].value;
+   if( j == null || j == "" )
+   {
+     alert( "Please provide securityQuestion " );
+     return false;
+   }
+    var j = document.forms["studentEnroll"]["answer"].value;
+   if( j == null || j == "" )
+   {
+     alert( "Please provide answer " );
+     return false;
+   }
+    var j = document.forms["studentEnroll"]["accountType"].value;
+   if( j == null || j == "" )
+   {
+     alert( "Please provide accountType " );
+     return false;
+   }
+    var j = document.forms["studentEnroll"]["status"].value;
+   if( j == null || j == "" )
+   {
+     alert( "Please provide status " );
+     return false;
+   }
+   return true;
+}
+	</script>
+
+<form name ="studentEnroll" action="./enroll" method="post" onsubmit="return validateForm()">
+
 <h1 align="center"><font color="blue">Student Information Form</font></h1>
 <table align="center">      
 	<tr>
