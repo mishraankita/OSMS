@@ -3,24 +3,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>student registration</title>
 </head>
-<body background="welcome.jpg">
+<body background="new.jpg">
 <form action="./enrollStudentOrDpdDetails" method=POST>
-<h1 align="center"><font color="blue">View Student/DPD information</font></h1>
-<table align="center">      
-	<tr>
-<!-- 	<td>Enter the type of account you want to enroll</td> -->
-<!-- 		<td><input type="text" name=accountType></input></td> -->
-<!-- 	</tr> -->
-
-		
+<h1 align="center"><font color="black">View Student/DPD information</font></h1>
+<table border="8" align="center">    
+ <tr>
+ 	<td>
+	<input type="submit" name= "action" value="Register a new Student" onclick="form.action='./studentEnroll.jsp';">
+	</td>
+</tr>
+<tr>
+ <td>
+	<input type="submit" name= "action" value="Register a new DPD" onclick="form.action='./dpdEnroll.jsp';">
+	</td>
+	</tr>
+<tr>
+	<td>
+	<input type="submit" name= "action" value="Go to Home" onclick="form.action='./adminsuccess.html';">
+	</td>
+</tr>
+<tr>
+	<td>
+	<input type="submit" name= "action" value="Logout" onclick="form.action='./welcome.html';">
+	</td>
+</tr>
 </table>
-	<pre >
-	<input type="submit" value="SUBMIT"/ >
-	</pre>
-		
 </form>
- <h3 align="center"><a href="./adminsuccess.html">   Go to Home</a></h3>
-  <h3 align=center><a href=./studentEnroll.jsp>Register a new Student</a><br/></h3>
- <h3 align=center><a href=./dpdEnroll.jsp>Register a new DPD</a><br/></h3>
 </body>
 </html>
