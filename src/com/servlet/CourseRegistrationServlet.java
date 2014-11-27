@@ -41,43 +41,71 @@ public class CourseRegistrationServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 		List<String> rowItems = new ArrayList<String>();
 
 		CourseRegistration coursesRegistration = new CourseRegistration();
 		// Iterate through courseOffed table and addCourseOffered
 		// THIS MUST BE DONE BEFORE LOADING courseTaken
-		// coursesRegistration.addCourseOffered(courseId, courseName,
-		// departmentId, professor, labId, courseSchedule, sessionOffered,
-		// addDropDeadline, preRequisiteCourseId, classCapacity);
-		coursesRegistration.testLoadCourseOfferedDummyData();
-
-		// Iterate through coursetaken table and addCourseTaken
-		// This will use information loaded in courseOffered
-		// coursesRegistration.addCourseTaken(courseId, gradeObtained);
-		coursesRegistration.testLoadCourseTakenDummyData();
-		// Build list/table
-		coursesRegistration.buildRegistrationList(rowItems);
-		
-		PrintWriter out = response.getWriter();
-	    out.println("<html><body><h1 align=center ><font color=blue>Course Registration</font></h1><br><table border =1 align=center ><tr><th>Selection</th><th>Course Name</th><th>Schedule</th><th>Student ID</th></tr>");	
-
-	    for (ListIterator<String> iter = rowItems.listIterator(); iter
-				.hasNext();) {
-			String rowItem = iter.next();
-			String delimiter = "[$]";
-			String[] tokens = rowItem.split(delimiter);
-			if(tokens.length < 4)//error, expecting 4 items: buttonLabel, courseName, courseSchedule, courseID
-				continue;
-			String activeState = "disabled";
-			if(tokens[0].equals("Add") || tokens[0].equals("Drop"))
-				activeState = "enabled";
+		try {
+			HttpSession session = request.getSession();
+			String userID = (String) session.getAttribute("userID");
+			//userID="123";//TEMPORARY FOR TESTING
 			
-			out.println("<tr><td><input name="+tokens[0]+" "+tokens[3]+" type=\"submit\" value="+tokens[0]+" "+activeState+"></td><td>"+tokens[1]+"</td><td>"+tokens[2]+"</td></tr>");
-		}
-		
-		out.println("</table border=3 ></body></html>");
-		out.println("<br/><br/>");
-	}
+			Connection con = DBConnection.getConnection();
+			Statement stmt = con.createStatement();
+			
+			ResultSet rs = stmt.executeQuery("select * from courseoffered");
+			rs = stmt.executeQuery("select * from courseoffered");
 
+			while (rs.next()) {
+				coursesRegistration.addCourseOffered(rs.getInt("CourseID"),
+						rs.getString("CourseName"), rs.getInt("DepartmentID"),
+						rs.getString("Schedule"),
+						rs.getString("SessionOffered"),
+						rs.getInt("PreRequisiteCourseID"),
+						rs.getInt("CapacityOfStudent"));
+			}
+
+			// Iterate through coursetaken table and addCourseTaken
+			// This will use information loaded in courseOffered
+			rs = stmt.executeQuery("select * from coursetaken where UserID='"
+					+ userID + "'");
+			while (rs.next()) {
+				coursesRegistration.addCourseTaken(rs.getInt("CourseID"),
+						rs.getString("GradesObtained"));
+			}
+
+			// Build list/table
+			coursesRegistration.buildRegistrationList(rowItems);
+
+			PrintWriter out = response.getWriter();
+			out.println("<html><body><h1 align=center ><font color=blue>Course Registration</font></h1><br><table border =1 align=center ><tr><th>Selection</th><th>Course Name</th><th>Schedule</th><th>Student ID</th></tr>");
+
+			for (ListIterator<String> iter = rowItems.listIterator(); iter
+					.hasNext();) {
+				String rowItem = iter.next();
+				String delimiter = "[$]";
+				String[] tokens = rowItem.split(delimiter);
+				if (tokens.length < 4)// error, expecting 4 items: buttonLabel,
+										// courseName, courseSchedule, courseID
+					continue;
+				String activeState = "disabled";
+				if (tokens[0].equals("Add") || tokens[0].equals("Drop"))
+					activeState = "enabled";
+
+				out.println("<tr><td><input name=" + tokens[0] + " "
+						+ tokens[3] + " type=\"submit\" value=" + tokens[0]
+						+ " " + activeState + "></td><td>" + tokens[1]
+						+ "</td><td>" + tokens[2] + "</td></tr>");
+			}
+
+			out.println("</table border=3 ></body></html>");
+			out.println("<br/><br/>");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

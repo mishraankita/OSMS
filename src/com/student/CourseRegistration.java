@@ -111,6 +111,14 @@ public class CourseRegistration {
 				preRequisiteCourseId, classCapacity));
 	}
 
+	public void addCourseOffered(int courseId, String courseName,
+			int departmentId, String courseSchedule, String sessionOffered,
+			int preRequisiteCourseId, int classCapacity) {
+		addCourseOffered(courseId, courseName, departmentId, null, 0,
+				courseSchedule, sessionOffered, 0, preRequisiteCourseId,
+				classCapacity);
+	}
+			
 	public void addCourseTaken(int courseId, String gradeObtained) {
 		String schedule = null;
 		String name = null;
