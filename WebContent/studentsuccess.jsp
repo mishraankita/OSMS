@@ -1,17 +1,36 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Student Login succesfull</title>
+<title>Insert title here</title>
 </head>
-<body bgcolor="#fffff">
-<%String user = (String)session.getAttribute("userName");  %>
-<h1 align="center">Student <%=user%> Login succesfull</h1>
-<form action="./mydetails" align="center" method="post">
-<input type="hidden" name="user" value"<%=user%>"/>
-<input type="submit" value="Get MyDetails" />
-</form>
-<!--<p align="center"><a href="./StudentRegistration.html">Get My Details</a></p>
-<p align="center"><a href="./StudentRegistration.html">Student Registration click here</a></p>-->
+<body background="new.jpg">
+<h1 align="center"><font color="black">Welcome To Home Page </font></h1>
+<jsp:declaration>
+String userID = "";
+</jsp:declaration>
+<jsp:scriptlet>
+userID = request.getParameter("UserID");
+</jsp:scriptlet>
+<table border="8" align="center">  
+<%  request.getSession().getAttribute("userID");
+	 session.setAttribute("userID",userID);
+%>
 </body>
+<form action="./MyDetailsServlet" method=POST >
+<input type="submit"  name="submit" value="Academic details" />
+</form>
+<form action="./CourseRegistrationServlet" method=POST >
+ <input type="submit"  name="submit" value="Register for course " />
+ </form>
+ <form action="./getStudentInfo" method=POST >
+ <input type="submit"  name="submit" value=Ppay the fee " />
+ </form>
+ <form action="./getStudentInfo" method=POST >
+ <input type="submit"  name="submit" value="Account Settings details" />
+ </form>
+ <form action="./welcome.html" method=POST>
+          <pre><input type="submit"  name="submit" value=" Logout"/></pre>
+</form>
 </html>

@@ -71,7 +71,8 @@ public class CommonServletForLogin extends HttpServlet {
 							&& passWord.equals(dbPassWord) && AccountType.equalsIgnoreCase(dbAccountType)) {
 						updateLoginAttemptCount(0, dbUserID);
 						if (AccountType.equals("student")) {
-							rd = request.getRequestDispatcher("./studentsuccess.html");
+							rd = request.getRequestDispatcher("./studentsuccess.jsp");
+							//rd = request.getRequestDispatcher("./studentsuccess.jsp");
 							rd.forward(request, response);
 						}
 						else if (AccountType.equals("admin")) {
