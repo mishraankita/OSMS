@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `school` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `school`;
 -- MySQL dump 10.13  Distrib 5.6.17, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: school
+-- Host: localhost    Database: school
 -- ------------------------------------------------------
 -- Server version	5.6.21-log
 
@@ -38,7 +38,7 @@ CREATE TABLE `department` (
 
 LOCK TABLES `department` WRITE;
 /*!40000 ALTER TABLE `department` DISABLE KEYS */;
-INSERT INTO `department` VALUES (1,'SOEN','1'),(2,'PHYS','2'),(3,'CHEM','3'),(4,'MATH','4'),(5,'ENG','5'),(6,'COMP','6'),(7,'BIO','7');
+INSERT INTO `department` VALUES (1,'SOEN','1');
 /*!40000 ALTER TABLE `department` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-11-18 23:35:19
+-- Dump completed on 2014-11-26 23:01:51

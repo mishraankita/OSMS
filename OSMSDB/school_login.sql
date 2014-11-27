@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `school` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `school`;
 -- MySQL dump 10.13  Distrib 5.6.17, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: school
+-- Host: localhost    Database: school
 -- ------------------------------------------------------
 -- Server version	5.6.21-log
 
@@ -30,7 +30,8 @@ CREATE TABLE `login` (
   `SecurityQuestion` varchar(45) DEFAULT NULL,
   `Answer` varchar(45) DEFAULT NULL,
   `AccountType` varchar(10) DEFAULT NULL,
-  `Status` varchar(10) DEFAULT NULL,
+  `Status` tinyint(1) DEFAULT '1',
+  `LoginAttemptCount` int(1) DEFAULT '0',
   PRIMARY KEY (`UserID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -41,7 +42,7 @@ CREATE TABLE `login` (
 
 LOCK TABLES `login` WRITE;
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES (66,'abc','kk','maths','student','active'),(111,'abc','Whats your favorite subject?','maths','admin','active'),(123,'abc','Whats your favorite subject?','maths','student','active'),(222,'abc','Whats your favorite subject?','maths','dpd','active'),(666,'abc','hh','maths','dpd','active'),(777,'5555','z','maths','student','active'),(888,'abc','aa','maths','student','active'),(6776973,'abc','whats your fav subject?','maths','student','active');
+INSERT INTO `login` VALUES (66,'abc','kk','maths','student',1,0),(111,'abc','Whats your favorite subject?','maths','admin',1,0),(123,'abc','Whats your favorite subject?','maths','student',1,0),(222,'abc','Whats your favorite subject?','maths','dpd',1,0),(666,'abc','hh','maths','dpd',1,0),(678,'abc','fexx','maths','student',1,0),(777,'5555','z','maths','student',1,0),(888,'abc','aa','maths','student',1,0),(6776973,'abc','whats your fav subject?','maths','student',1,0);
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-11-18 23:35:29
+-- Dump completed on 2014-11-26 23:02:05

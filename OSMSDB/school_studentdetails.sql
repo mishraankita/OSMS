@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `school` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `school`;
 -- MySQL dump 10.13  Distrib 5.6.17, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: school
+-- Host: localhost    Database: school
 -- ------------------------------------------------------
 -- Server version	5.6.21-log
 
@@ -45,7 +45,7 @@ CREATE TABLE `studentdetails` (
 
 LOCK TABLES `studentdetails` WRITE;
 /*!40000 ALTER TABLE `studentdetails` DISABLE KEYS */;
-INSERT INTO `studentdetails` VALUES (1,'a','a','a',1,'a','a',1,'a','12/08/1988'),(66,'aa','bb','bb',88,'bb','bb',1,'bb','11'),(123,'Ankita','Mishra','st marc',51446695,'mishraankita88@live.com','Fall 2013',1,NULL,NULL),(345,'ankita','mishra','india',199999,'ankita.mishra@gmail.com','Fall - 2013',1,'Masters','12-08-1988'),(555,'ooo','mmm','nnn',12345,'hhhh','ff ff',2,'masters','12222'),(777,'z','z','z',6,'z','z',5,'5','5'),(888,'aa','aa','aa',77,'aa','aa',1,'masters','11'),(6776973,'sahil','chaudhary','dil',100,'sahil','FALL 2012',1,'Masters','05/02/1987');
+INSERT INTO `studentdetails` VALUES (1,'a','a','a',1,'a','a',1,'a','12/08/1988'),(66,'aa','bb','bb',88,'bb','bb',1,'bb','11'),(123,'Ankita','Mishra','india',2222,'mishraankita88@live.com','SUMMER 2013',1,NULL,NULL),(345,'ankita','mishra','india',199999,'ankita.mishra@gmail.com','Fall - 2013',1,'Masters','12-08-1988'),(555,'ooo','mmm','nnn',12345,'hhhh','ff ff',2,'masters','12222'),(678,'sahil ankita','aa','aa',123,'aaa','aa',1,'w','ee'),(777,'z','z','z',6,'z','z',5,'5','5'),(888,'aa','aa','aa',77,'aa','aa',1,'masters','11'),(6776973,'sahil','chaudhary','dil',100,'sahil','FALL 2012',1,'Masters','05/02/1987');
 /*!40000 ALTER TABLE `studentdetails` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -58,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-11-18 23:35:31
+-- Dump completed on 2014-11-26 23:02:07

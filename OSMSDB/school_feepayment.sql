@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `school` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `school`;
 -- MySQL dump 10.13  Distrib 5.6.17, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: school
+-- Host: localhost    Database: school
 -- ------------------------------------------------------
 -- Server version	5.6.21-log
 
@@ -26,9 +26,9 @@ DROP TABLE IF EXISTS `feepayment`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `feepayment` (
   `UserID` int(11) NOT NULL,
-  `PaymentDate` int(10) DEFAULT NULL,
+  `PaymentDate` varchar(45) DEFAULT NULL,
   `PaymentAmount` int(10) DEFAULT NULL,
-  `PaymentFeeDeadLine` int(11) DEFAULT NULL,
+  `PaymentFeeDeadLine` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`UserID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -39,7 +39,7 @@ CREATE TABLE `feepayment` (
 
 LOCK TABLES `feepayment` WRITE;
 /*!40000 ALTER TABLE `feepayment` DISABLE KEYS */;
-INSERT INTO `feepayment` VALUES (123,20141025,50000,20141115);
+INSERT INTO `feepayment` VALUES (0,'000',0,'12/12/2014'),(123,'20141025',50000,'20141115');
 /*!40000 ALTER TABLE `feepayment` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-11-18 23:35:17
+-- Dump completed on 2014-11-26 23:01:49
