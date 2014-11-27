@@ -51,13 +51,16 @@ public class CourseRegistrationServlet extends HttpServlet {
 		try {
 			HttpSession session = request.getSession();
 			String userID = (String) session.getAttribute("userID");
-			//userID="123";//TEMPORARY FOR TESTING
 			
 			Connection con = DBConnection.getConnection();
 			Statement stmt = con.createStatement();
 			
-			ResultSet rs = stmt.executeQuery("select * from courseoffered");
-			rs = stmt.executeQuery("select * from courseoffered");
+			ResultSet rs = stmt.executeQuery("select DepartmentID from studentdetails where UserID = " + userID);
+			int departmentID = 0;
+			if(rs.next())
+				departmentID = rs.getInt("DepartmentID");
+			
+			rs = stmt.executeQuery("select * from courseoffered where DepartmentID = " + departmentID);
 
 			while (rs.next()) {
 				coursesRegistration.addCourseOffered(rs.getInt("CourseID"),
@@ -81,7 +84,11 @@ public class CourseRegistrationServlet extends HttpServlet {
 			coursesRegistration.buildRegistrationList(rowItems);
 
 			PrintWriter out = response.getWriter();
-			out.println("<html><body><h1 align=center ><font color=blue>Course Registration</font></h1><br><table border =1 align=center ><tr><th>Selection</th><th>Course Name</th><th>Schedule</th><th>Student ID</th></tr>");
+			out.println("<html><body><form action=\"./CourseChangeStudentServlet\" method=POST>"
+					+ "<h1 align=center ><font color=blue>Course Registration</font></h1>"
+//					+ "<form><input type=\"submit\" value=\"Close\"></form>"
+					+ "<br><table border =1 align=center >"
+					+ "<tr><th>Selection</th><th>Course Name</th><th>Schedule</th></tr>");
 
 			for (ListIterator<String> iter = rowItems.listIterator(); iter
 					.hasNext();) {
@@ -95,13 +102,15 @@ public class CourseRegistrationServlet extends HttpServlet {
 				if (tokens[0].equals("Add") || tokens[0].equals("Drop"))
 					activeState = "enabled";
 
-				out.println("<tr><td><input name=" + tokens[0] + " "
-						+ tokens[3] + " type=\"submit\" value=" + tokens[0]
-						+ " " + activeState + "></td><td>" + tokens[1]
-						+ "</td><td>" + tokens[2] + "</td></tr>");
+				String name = tokens[0] + "$" + tokens[3] + "$" + userID;
+				String row = "<tr><td><input name= \"" + name
+						+ "\" type=\"submit\" value="
+						+ tokens[0] + " " + activeState + "></td><td>"
+						+ tokens[1] + "</td><td>" + tokens[2] + "</td></tr>"; 
+				out.println(row);
 			}
 
-			out.println("</table border=3 ></body></html>");
+			out.println("</table border=3 ></form></body></html>");
 			out.println("<br/><br/>");
 
 		} catch (Exception e) {

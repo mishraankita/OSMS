@@ -114,4 +114,16 @@
   	<servlet-name>MyDetailsServlet</servlet-name>
   	<url-pattern>/MyDetailsServlet</url-pattern>
   </servlet-mapping>
+
+    <servlet>
+    	<description>
+    	Execute course change and notify the user</description>
+    	<display-name>CourseChangeStudentServlet</display-name>
+    	<servlet-name>CourseChangeStudentServlet</servlet-name>
+    	<servlet-class>com.servlet.CourseChangeStudentServlet</servlet-class>
+    </servlet>
+  <servlet-mapping>
+  	<servlet-name>CourseChangeStudentServlet</servlet-name>
+  	<url-pattern>/CourseChangeStudentServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
