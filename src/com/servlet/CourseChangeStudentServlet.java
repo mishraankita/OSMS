@@ -80,15 +80,18 @@ public class CourseChangeStudentServlet extends HttpServlet {
 							+ "," + tokens[1] + "," + null + ",\""
 							+ sessionRegisteredIn + "\",\"" + schedule + "\");";
 					stmt.executeUpdate(query);
+					message = "The course was successfully added";
 				}
 			}
 			if (tokens[0].equals("Drop")) {
 				query = "DELETE FROM coursetaken WHERE UserID = " + tokens[2]
 						+ " AND CourseID = " + tokens[1] + ";";
 				stmt.executeUpdate(query);
+				message = "The course was successfully dropped";
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+			message = "An error ocurred during course registration.";
 		}
 
 		RequestDispatcher rd = request

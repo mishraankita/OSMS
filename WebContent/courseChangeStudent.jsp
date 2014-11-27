@@ -9,7 +9,7 @@
 <body>
 
 <form action="./studentsuccess.jsp" method=POST>
-		<input name="courseChangeOutcome" value = "Registraion Output" name = "resultsMessage">
+		<input value = "Registration Output" name = "resultsMessage">
 	</form>
 <a href="./studentsuccess.jsp">Close</a>
 </body>
