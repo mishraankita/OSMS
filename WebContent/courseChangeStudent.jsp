@@ -9,8 +9,10 @@
 <body>
 
 <form action="./studentsuccess.jsp" method=POST>
-		<input value = "Registration Output" name = "resultsMessage">
+	<br><%=(String)request.getAttribute("resultsMessage")%><br>
 	</form>
-<a href="./studentsuccess.jsp">Close</a>
+<form action="./CourseRegistrationServlet" method=POST >
+ <input type="submit"  name="submit" value="Return" />
+ </form>
 </body>
 </html>

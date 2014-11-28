@@ -96,6 +96,7 @@ public class CourseChangeStudentServlet extends HttpServlet {
 
 		RequestDispatcher rd = request
 				.getRequestDispatcher("./courseChangeStudent.jsp");
+		request.setAttribute("resultsMessage", message);
 		rd.forward(request, response);
 	}
 }

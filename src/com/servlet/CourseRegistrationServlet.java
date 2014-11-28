@@ -84,9 +84,11 @@ public class CourseRegistrationServlet extends HttpServlet {
 			coursesRegistration.buildRegistrationList(rowItems);
 
 			PrintWriter out = response.getWriter();
-			out.println("<html><body><form action=\"./CourseChangeStudentServlet\" method=POST>"
+			out.println("<html><body>"
+					+ "<form action=\"./studentsuccess.jsp\" method=POST >"
+					+ "<input type=\"submit\"  name=\"submit\" value=\"Return\" /></form>"
+					+ "<form action=\"./CourseChangeStudentServlet\" method=POST>"
 					+ "<h1 align=center ><font color=blue>Course Registration</font></h1>"
-					+ "<a href=\"./studentsuccess.jsp\">Return</a>"
 					+ "<br><table border =1 align=center >"
 					+ "<tr><th>Selection</th><th>Course Name</th><th>Schedule</th></tr>");
 
