@@ -122,8 +122,30 @@
     	<servlet-name>CourseChangeStudentServlet</servlet-name>
     	<servlet-class>com.servlet.CourseChangeStudentServlet</servlet-class>
     </servlet>
+    <servlet>
+    	<description>
+    	</description>
+    	<display-name>FeePaymentServlet</display-name>
+    	<servlet-name>FeePaymentServlet</servlet-name>
+    	<servlet-class>com.servlet.FeePaymentServlet</servlet-class>
+    </servlet>
+    <servlet>
+    	<description>
+    	</description>
+    	<display-name>FeePaymentOutcomeServlet</display-name>
+    	<servlet-name>FeePaymentOutcomeServlet</servlet-name>
+    	<servlet-class>com.servlet.FeePaymentOutcomeServlet</servlet-class>
+    </servlet>
   <servlet-mapping>
   	<servlet-name>CourseChangeStudentServlet</servlet-name>
   	<url-pattern>/CourseChangeStudentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FeePaymentServlet</servlet-name>
+  	<url-pattern>/FeePaymentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FeePaymentOutcomeServlet</servlet-name>
+  	<url-pattern>/FeePaymentOutcomeServlet</url-pattern>
   </servlet-mapping>
 </web-app>

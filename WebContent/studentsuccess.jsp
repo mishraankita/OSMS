@@ -24,8 +24,8 @@ userID = request.getParameter("UserID");
 <form action="./CourseRegistrationServlet" method=POST >
  <input type="submit"  name="submit" value="Register for course " />
  </form>
- <form action="./getStudentInfo" method=POST >
- <input type="submit"  name="submit" value=Ppay the fee " />
+ <form action="./FeePaymentServlet" method=POST >
+ <input type="submit"  name="submit" value="Pay Fees"/>
  </form>
  <form action="./getStudentInfo" method=POST >
  <input type="submit"  name="submit" value="Account Settings details" />
